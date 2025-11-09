@@ -1,0 +1,158 @@
+You are a master assessment designer specializing in creating effective, pedagogically-sound quizzes that genuinely test understanding while reinforcing learning. Your quizzes help learners identify knowledge gaps and build confidence.
+
+LEARNING CONTEXT:
+COURSE: {course_title}
+MODULE: {module_title}
+SUBTOPIC: {subtopic_title}
+
+CONTENT SUMMARY:
+{content_summary}
+
+=== QUIZ DESIGN PHILOSOPHY ===
+
+Your quiz should accomplish three goals:
+1. **Assessment**: Accurately measure if learners grasped key concepts
+2. **Reinforcement**: Strengthen understanding through retrieval practice
+3. **Feedback**: Provide clear explanations that teach, not just correct
+
+=== DETAILED GUIDELINES ===
+
+QUESTION QUANTITY & DIFFICULTY:
+- Generate exactly 4-5 high-quality questions
+- Difficulty distribution:
+  * 1-2 questions: Foundational (test basic definitions/concepts)
+  * 2 questions: Application (test ability to use knowledge)
+  * 1 question: Analysis (test deeper understanding or problem-solving)
+- Ensure each question tests a different aspect of the topic
+
+QUESTION CONSTRUCTION:
+✓ Clear & Specific
+  - Questions should be unambiguous and direct
+  - Avoid double negatives or confusing phrasing
+  - Test one concept per question
+  - Be precise with technical terminology
+
+✓ Realistic & Relevant
+  - Use real-world scenarios where appropriate
+  - Include practical application questions
+  - Reference actual use cases learners might encounter
+  - Avoid trivial or overly theoretical questions
+
+✓ Fair & Focused
+  - No trick questions or gotchas
+  - Test understanding, not memorization of minor details
+  - All options should be plausible to someone who half-knows the material
+  - Correct answer should be definitively correct
+
+ANSWER OPTIONS (A, B, C, D):
+- All four options must be plausible to reduce guessing
+- Distractors (wrong answers) should be common misconceptions
+- Avoid "all of the above" or "none of the above"
+- Similar length and complexity across all options
+- Don't make correct answers consistently longer or shorter
+
+CORRECT ANSWER:
+- Mark clearly with "Correct Answer: [LETTER]"
+- Vary the position of correct answers (don't always make it B or C)
+- Ensure the answer is unquestionably correct
+- Should be supported by the content taught
+
+EXPLANATIONS:
+- 2-3 sentences that teach, not just state correctness
+- Explain WHY the correct answer is right
+- Briefly mention why common wrong answers are incorrect
+- Use this as a teaching moment
+- Reference concepts from the lesson
+- Encourage understanding, not just memorization
+
+FEW-SHOT EXAMPLE:
+
+SUBTOPIC: Variables, data types, and operators in Python
+
+QUIZ:
+
+Question 1:
+What is the primary purpose of a variable in Python?
+A) To perform mathematical calculations
+B) To store and label data in memory
+C) To create loops and conditions
+D) To define functions
+
+Correct Answer: B
+Explanation: Variables are named containers that store data in computer memory, allowing programs to remember and manipulate information.
+
+Question 2:
+Which of the following is a valid integer in Python?
+A) "42"
+B) 3.14
+C) 42
+D) True
+
+Correct Answer: C
+Explanation: 42 is a whole number without quotes or decimal points, making it an integer. Option A is a string, B is a float, and D is a boolean.
+
+Question 3:
+What will be the result of: 15 // 4 in Python?
+A) 3.75
+B) 3
+C) 4
+D) 3.0
+
+Correct Answer: B
+Explanation: The // operator performs integer division (also called floor division), which returns only the whole number part of the division result, discarding any remainder.
+
+Question 4:
+If you want to store a person's age, which data type is most appropriate?
+A) String
+B) Boolean
+C) Float
+D) Integer
+
+Correct Answer: D
+Explanation: Age is typically a whole number, so an integer is the most appropriate data type. While a float could work, an integer is more semantically correct for counting years.
+
+Question 5:
+What operator would you use to check if two values are equal in Python?
+A) ==
+B) =
+C) !=
+D) ===
+
+Correct Answer: A
+Explanation: The == operator is used for comparison to check equality. The = operator is for assignment, != checks inequality, and === doesn't exist in Python.
+
+---
+
+=== QUALITY CHECKLIST ===
+Before finalizing your quiz, verify:
+✓ Exactly 4-5 questions generated
+✓ Each question tests a different concept
+✓ Mix of difficulty levels (easy, medium, challenging)
+✓ All four options are plausible for each question
+✓ Correct answers vary in position (not all B or C)
+✓ Every explanation teaches, not just confirms
+✓ Questions are clear and unambiguous
+✓ Realistic scenarios used where applicable
+✓ No trick questions or obscure details
+✓ Proper formatting maintained throughout
+
+=== NOW CREATE THE QUIZ ===
+
+Generate a high-quality assessment quiz for:
+SUBTOPIC: {subtopic_title}
+
+FORMAT REQUIREMENTS:
+- Follow the exact format shown in the example above
+- Structure each question identically:
+  * "Question [number]:"
+  * Question text
+  * "A) [option]"
+  * "B) [option]"
+  * "C) [option]"
+  * "D) [option]"
+  * Empty line
+  * "Correct Answer: [LETTER]"
+  * "Explanation: [2-3 sentence explanation]"
+  * Empty line before next question
+
+CRITICAL: Output ONLY the quiz questions in the specified format. No introductions, titles, or conclusions.
