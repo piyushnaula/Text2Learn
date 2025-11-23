@@ -38,7 +38,7 @@ Text 2 Learn unites Groq large language models, a Streamlit interface, and Postg
 
 ## Prerequisites
 
-1. Python 3.8 or newer
+1. Python 3.10 or newer
 2. Groq API key from [console.groq.com](https://console.groq.com/)
 3. YouTube Data API key from [Google Cloud Console](https://console.cloud.google.com/)
 4. PostgreSQL server (optional when using SQLite)
@@ -98,24 +98,6 @@ Tips for best results:
 
 ---
 
-## Architecture Snapshot
-
-- **Streamlit Frontend:** Session handling, layout, interactive widgets.
-- **Services Layer:** `ai_service.py`, `youtube_service.py`, and `db_service.py` encapsulate AI calls, video search, and persistence.
-- **Database Layer:** SQLAlchemy models map to users, courses, modules, subtopics, quizzes, and progress tables.
-- **Prompt Templates:** Stored in `prompts/` for outlines, lesson content, search keywords, and quizzes.
-
-```
-Frontend (Streamlit)
-      │
-Application Services
- (AI | YouTube | DB)
-      │
-Data Storage (PostgreSQL / SQLite)
-```
-
----
-
 ## AI Workflow
 
 1. Generate course outlines with few-shot and chain-of-thought prompting.
@@ -128,57 +110,3 @@ Tunable parameters in `services/ai_service.py`:
 
 - `self.model` controls the Groq model (default `llama-3.3-70b-versatile`).
 - Temperature defaults: outline 0.7, content 0.7, keywords 0.5, quizzes 0.6.
-
----
-
-## Troubleshooting
-
-| Issue | Fix |
-| --- | --- |
-| `FATAL: password authentication failed` | Verify PostgreSQL credentials or switch to SQLite. |
-| `ModuleNotFoundError: No module named 'streamlit'` | Activate the virtual environment and reinstall requirements. |
-| Groq authentication errors | Confirm the API key in `.env` and available quota. |
-| Port 8501 already in use | Run `streamlit run app.py --server.port 8502` or free the port. |
-| YouTube videos missing | Ensure API key validity and quota; some videos block embedding. |
-| Slow first load | Expected during first-generation; cached content loads instantly afterward. |
-
----
-
-## Performance Snapshot
-
-- Course outline: 10–15 seconds
-- First lesson generation: 20–30 seconds
-- Cached lesson reload: < 1 second
-- Quiz generation: 8–12 seconds
-- Typical memory usage: 200–400 MB
-- Storage per course: ≈50 KB
-
----
-
-## Future Enhancements
-
-- User authentication with secure credentials
-- Progress dashboard and analytics
-- Text-to-speech lessons
-- PDF export for offline study
-- Gamified achievements
-- AI-powered topic recommendations
-- Collaborative learning spaces
-- Multi-language course generation
-- Mobile companion app
-
----
-
-## Example Topics
-
-- Technical: “Machine Learning Basics”, “Web Development with React”
-- Business: “Personal Finance Management”, “Entrepreneurship 101”
-- Creative: “Photography Essentials”, “Content Writing Mastery”
-- Academic: “Introduction to Psychology”, “World History Overview”
-
----
-
-## Support & Contact
-
-- Create GitHub issues for bugs or feature requests.
-- Email Piyush Naula for collaboration and inquiries.
