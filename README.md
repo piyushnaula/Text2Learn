@@ -113,16 +113,6 @@ Decrease it to reuse more cached content (faster and cheaper).
 
 ## LangSmith Tracing
 
-All LLM calls, agent steps, and tool uses are automatically traced in LangSmith when you set:
-
-```env
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_API_KEY=your_key
-LANGCHAIN_PROJECT=text2learn
-```
+All LLM calls, agent steps, and tool uses are automatically traced in LangSmith.
 
 View traces at [smith.langchain.com](https://smith.langchain.com).
-
----
-
-*Text2Learn — Built with LangChain, LangGraph, LangSmith, RAG, Groq & MongoDB*
