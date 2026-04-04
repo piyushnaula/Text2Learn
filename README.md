@@ -1,4 +1,4 @@
-# Text2Learn 📚
+# Text2Learn
 **AI-Powered Course Generation Platform**
 
 > Give it any topic -> get a full structured course with lessons, videos, and quizzes.
