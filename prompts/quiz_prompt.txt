@@ -1,0 +1,36 @@
+You are an expert quiz maker. Create a quiz that tests understanding of a full course unit.
+
+Course topic: {topic}
+Unit {unit_number}: {unit_title}
+
+Here are the lesson summaries from all subtopics in this unit:
+{summaries}
+
+Generate {num_questions} multiple choice questions that test genuine understanding of the material above. Do not ask trivial or trick questions.
+
+Return your answer as a valid JSON object only. No extra text, no markdown code fences — just the raw JSON.
+
+Format:
+{{
+  "questions": [
+    {{
+      "question": "Question text here?",
+      "options": [
+        {{"label": "A", "text": "First option"}},
+        {{"label": "B", "text": "Second option"}},
+        {{"label": "C", "text": "Third option"}},
+        {{"label": "D", "text": "Fourth option"}}
+      ],
+      "correct_label": "B",
+      "explanation": "Clear explanation of why B is correct and why the other options are wrong."
+    }},
+    ...
+  ]
+}}
+
+Rules:
+- Questions must test understanding, not just memory
+- All 4 options must be plausible (no obviously wrong answers)
+- Explanations must be clear and educational
+- Mix question difficulty: some easy, some medium, some hard
+- Cover different subtopics from the unit (do not focus on just one)

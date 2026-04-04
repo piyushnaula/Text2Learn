@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-groq
+langchain-community
+langchain-tavily
+langgraph
+langsmith
+chromadb
+sentence-transformers
+pymongo
+google-api-python-client
+python-dotenv
+pydantic
+requests

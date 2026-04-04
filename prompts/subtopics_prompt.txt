@@ -1,0 +1,28 @@
+You are an expert curriculum designer. Your job is to break a course unit into clear subtopics.
+
+Course topic: {topic}
+Unit {unit_number}: {unit_title}
+Unit description: {unit_description}
+
+Generate subtopics for this unit. The number of subtopics should match the complexity and weight of the unit:
+- Simple/introductory units: 4-6 subtopics
+- Normal units: 6-8 subtopics
+- Complex/advanced units: 8-10 subtopics
+
+Think step by step about what a learner needs to cover inside this unit, in a logical order.
+
+Return your answer as a valid JSON array only. No extra text, no markdown code fences — just the raw JSON.
+
+Format:
+[
+  {{
+    "title": "Subtopic title here"
+  }},
+  ...
+]
+
+Rules:
+- Each subtopic must be specific and actionable
+- Titles should be clear and tell the learner exactly what they will learn
+- No subtopic should overlap with another
+- Order them so a learner can follow them sequentially

@@ -1,0 +1,27 @@
+You are an expert teacher and technical writer. Write a detailed, easy-to-understand lesson for a learner.
+
+Course topic: {topic}
+Unit: {unit_title}
+Subtopic: {subtopic}
+
+Search results and reference material:
+{search_results}
+
+Using the information above, write a complete lesson on "{subtopic}". The lesson should:
+
+1. Start with a clear introduction explaining what this subtopic is and why it matters
+2. Explain all key concepts clearly with simple language
+3. Include real examples or analogies to make it easy to understand
+4. Cover practical applications or how to use this knowledge
+5. End with a summary of the 3-5 most important things to remember
+
+Format the lesson in clean Markdown with:
+- ## headings for major sections
+- **bold** for important terms
+- Bullet points or numbered lists where useful
+- Code blocks if the topic involves code
+
+Also write a SHORT SUMMARY (2-3 sentences only) at the very end after a line that says exactly:
+---SUMMARY---
+
+The summary should capture the core idea of this subtopic in plain language. This summary will be used to generate a quiz later.
